@@ -1,0 +1,143 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "creation": "2025-05-19 19:15:45.365648",
+ "doctype": "DocType",
+ "engine": "InnoDB",
+ "field_order": [
+  "scheme_name",
+  "column_break_qskc",
+  "section_break_qspt",
+  "effective_from",
+  "scheme_type",
+  "applicable_for_all_products",
+  "applicable_for_all_retailers",
+  "applicable_for_all_areas",
+  "column_break_socw",
+  "effective_to",
+  "scheme_type_for",
+  "section_break_almj",
+  "applicable_for_products",
+  "applicable_for_retailer",
+  "applicable_for_areas",
+  "column_break_vrqe"
+ ],
+ "fields": [
+  {
+   "fieldname": "scheme_name",
+   "fieldtype": "Data",
+   "label": "Scheme Name"
+  },
+  {
+   "fieldname": "column_break_qskc",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "section_break_qspt",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "effective_from",
+   "fieldtype": "Date",
+   "label": "Effective From"
+  },
+  {
+   "fieldname": "scheme_type",
+   "fieldtype": "Link",
+   "label": "Scheme Type",
+   "options": "Scheme Type"
+  },
+  {
+   "fieldname": "column_break_socw",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "effective_to",
+   "fieldtype": "Date",
+   "label": "Effective To"
+  },
+  {
+   "fetch_from": "scheme_type.scheme_type_for",
+   "fieldname": "scheme_type_for",
+   "fieldtype": "Select",
+   "label": "Scheme Applicable For",
+   "options": "\nRetailer\nProduct\nArea",
+   "read_only": 1
+  },
+  {
+   "fieldname": "section_break_almj",
+   "fieldtype": "Section Break"
+  },
+  {
+   "depends_on": "eval: doc.scheme_type_for == \"Product\" && doc.applicable_for_all_products == 0;",
+   "fieldname": "applicable_for_products",
+   "fieldtype": "Table MultiSelect",
+   "label": "Applicable For Products",
+   "options": "Item Multiselect"
+  },
+  {
+   "depends_on": "eval: doc.scheme_type_for == \"Retailer\" && doc.applicable_for_all_retailers == 0;",
+   "fieldname": "applicable_for_retailer",
+   "fieldtype": "Table MultiSelect",
+   "label": "Applicable For Retailer",
+   "options": "Customer Multiselect"
+  },
+  {
+   "depends_on": "eval: doc.scheme_type_for == \"Area\" && doc.applicable_for_all_areas == 0;",
+   "fieldname": "applicable_for_areas",
+   "fieldtype": "Table MultiSelect",
+   "label": "Applicable For Areas",
+   "options": "Territory Multiselect"
+  },
+  {
+   "default": "0",
+   "depends_on": "eval: doc.scheme_type_for == \"Product\";",
+   "fieldname": "applicable_for_all_products",
+   "fieldtype": "Check",
+   "label": "Applicable For All Products"
+  },
+  {
+   "default": "0",
+   "depends_on": "eval: doc.scheme_type_for == \"Area\";",
+   "fieldname": "applicable_for_all_areas",
+   "fieldtype": "Check",
+   "label": "Applicable For All Areas"
+  },
+  {
+   "default": "0",
+   "depends_on": "eval: doc.scheme_type_for == \"Retailer\";",
+   "fieldname": "applicable_for_all_retailers",
+   "fieldtype": "Check",
+   "label": "Applicable For All Retailers"
+  },
+  {
+   "fieldname": "column_break_vrqe",
+   "fieldtype": "Column Break"
+  }
+ ],
+ "grid_page_length": 50,
+ "index_web_pages_for_search": 1,
+ "links": [],
+ "modified": "2025-05-19 19:50:38.639124",
+ "modified_by": "Administrator",
+ "module": "Durocon",
+ "name": "Scheme",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": []
+}
