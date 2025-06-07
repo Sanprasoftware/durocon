@@ -1,6 +1,7 @@
 {
  "actions": [],
  "allow_rename": 1,
+ "autoname": "field:scheme_name",
  "creation": "2025-05-19 19:15:45.365648",
  "doctype": "DocType",
  "engine": "InnoDB",
@@ -8,25 +9,40 @@
   "scheme_name",
   "column_break_qskc",
   "section_break_qspt",
+  "scheme_based_on",
+  "column_break_otkh",
   "effective_from",
   "scheme_type",
-  "applicable_for_all_products",
-  "applicable_for_all_retailers",
-  "applicable_for_all_areas",
   "column_break_socw",
   "effective_to",
   "scheme_type_for",
   "section_break_almj",
+  "applicable_for_all_products",
+  "applicable_for_all_retailers",
+  "applicable_for_all_areas",
+  "column_break_vrqe",
   "applicable_for_products",
   "applicable_for_retailer",
   "applicable_for_areas",
-  "column_break_vrqe"
+  "section_break_qlaq",
+  "target",
+  "column_break_nlqj",
+  "price",
+  "column_break_pkgr",
+  "gift",
+  "amount",
+  "amount_wise_tab",
+  "section_break_kehm",
+  "scheme_items",
+  "product_wise_tab",
+  "scheme_product_items"
  ],
  "fields": [
   {
    "fieldname": "scheme_name",
    "fieldtype": "Data",
-   "label": "Scheme Name"
+   "label": "Scheme Name",
+   "unique": 1
   },
   {
    "fieldname": "column_break_qskc",
@@ -113,15 +129,93 @@
   {
    "fieldname": "column_break_vrqe",
    "fieldtype": "Column Break"
+  },
+  {
+   "bold": 1,
+   "depends_on": "eval: doc.target;",
+   "fieldname": "price",
+   "fieldtype": "Select",
+   "label": "Price",
+   "options": "\nGift\nAmount"
+  },
+  {
+   "fieldname": "section_break_qlaq",
+   "fieldtype": "Section Break",
+   "hidden": 1
+  },
+  {
+   "fieldname": "column_break_nlqj",
+   "fieldtype": "Column Break"
+  },
+  {
+   "bold": 1,
+   "depends_on": "eval: doc.price == \"Gift\" && doc.target;",
+   "fieldname": "gift",
+   "fieldtype": "Data",
+   "label": "Gift"
+  },
+  {
+   "bold": 1,
+   "depends_on": "eval: doc.price == \"Amount\" && doc.target;",
+   "fieldname": "amount",
+   "fieldtype": "Currency",
+   "label": "Amount"
+  },
+  {
+   "fieldname": "target",
+   "fieldtype": "Currency",
+   "label": "Target"
+  },
+  {
+   "fieldname": "column_break_pkgr",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "section_break_kehm",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "scheme_items",
+   "fieldtype": "Table",
+   "label": "Scheme Amount Wise",
+   "options": "Scheme Amount Items"
+  },
+  {
+   "depends_on": "eval:doc.scheme_based_on == 'Amount'",
+   "fieldname": "amount_wise_tab",
+   "fieldtype": "Tab Break",
+   "label": "Amount Wise"
+  },
+  {
+   "depends_on": "eval:doc.scheme_based_on == 'Quantity'",
+   "fieldname": "product_wise_tab",
+   "fieldtype": "Tab Break",
+   "label": "Product Wise"
+  },
+  {
+   "fieldname": "scheme_product_items",
+   "fieldtype": "Table",
+   "label": "Scheme Product Wise",
+   "options": "Scheme Product Items"
+  },
+  {
+   "fieldname": "scheme_based_on",
+   "fieldtype": "Select",
+   "label": "Scheme Based On",
+   "options": "\nAmount\nQuantity"
+  },
+  {
+   "fieldname": "column_break_otkh",
+   "fieldtype": "Column Break"
   }
  ],
- "grid_page_length": 50,
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2025-05-19 19:50:38.639124",
+ "modified": "2025-06-02 13:22:05.078106",
  "modified_by": "Administrator",
  "module": "Durocon",
  "name": "Scheme",
+ "naming_rule": "By fieldname",
  "owner": "Administrator",
  "permissions": [
   {
