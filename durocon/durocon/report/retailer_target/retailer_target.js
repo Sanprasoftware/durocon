@@ -27,12 +27,6 @@ frappe.query_reports["Retailer Target"] = {
 			"reqd": 1,  
 			"default":"Retailer Wise"
 		},
-		// {
-		// 	"fieldname": "scheme_based_on",
-		// 	"label": "Scheme Based On",
-		// 	"fieldtype": "Select",  
-		// 	"options": ["Quantity", "Amount"]
-		// },	  
 	]
 };
   
