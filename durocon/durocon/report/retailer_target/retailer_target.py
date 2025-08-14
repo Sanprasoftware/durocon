@@ -20,23 +20,23 @@ def get_columns(filters):
     scheme_doc = frappe.get_doc("Scheme", filters.get("scheme_name"))
     if scheme_doc.scheme_based_on == "Quantity":
         return [
-            {"label": "Customer", "fieldname": "customer", "fieldtype": "Link", "options": "Customer", "width": 180},
-            {"label": "Territory", "fieldname": "territory", "fieldtype": "Data", "width": 150},
-            {"label": "Item Code", "fieldname": "item_code", "fieldtype": "Link", "options": "Item", "width": 150},
-            {"label": "Target Qty", "fieldname": "target_qty", "fieldtype": "Float", "width": 120},
-            {"label": "Total Qty", "fieldname": "total_value", "fieldtype": "Float", "width": 120},
+            {"label": "Customer", "fieldname": "customer", "fieldtype": "Link", "options": "Customer", "width": 250},
+            # {"label": "Territory", "fieldname": "territory", "fieldtype": "Data", "width": 150},
+            {"label": "Item Code", "fieldname": "item_code", "fieldtype": "Link", "options": "Item", "width": 220},
+            {"label": "Target Qty", "fieldname": "target_qty", "fieldtype": "Float", "width": 120, "precision": 2},
+            {"label": "Total Qty", "fieldname": "total_value", "fieldtype": "Float", "width": 120, "precision": 2},
             {"label": "Prize", "fieldname": "prizes", "fieldtype": "Data", "width": 140},
             {"label": "Gift", "fieldname": "gift", "fieldtype": "Data", "width": 140},
         ]
     else:
         return [
-            {"label": "Customer", "fieldname": "customer", "fieldtype": "Link", "options": "Customer", "width": 180},
-            {"label": "Territory", "fieldname": "territory", "fieldtype": "Data", "width": 150},
-            {"label": "Item Code", "fieldname": "item_code", "fieldtype": "Link", "options": "Item", "width": 150},
-            {"label": "Item Name", "fieldname": "item_name", "fieldtype": "Data", "width": 150},
-            {"label": "Min Amount", "fieldname": "min_amt", "fieldtype": "Float", "width": 120},
-            {"label": "Max Amount", "fieldname": "max_amt", "fieldtype": "Float", "width": 120},
-            {"label": "Total Amount", "fieldname": "total_value", "fieldtype": "Float", "width": 120},
+            {"label": "Customer", "fieldname": "customer", "fieldtype": "Link", "options": "Customer", "width": 250},
+            # {"label": "Territory", "fieldname": "territory", "fieldtype": "Data", "width": 150},
+            # {"label": "Item Code", "fieldname": "item_code", "fieldtype": "Link", "options": "Item", "width": 150},
+            {"label": "Item Name", "fieldname": "item_name", "fieldtype": "Data", "width": 220},
+            {"label": "Min Amount", "fieldname": "min_amt", "fieldtype": "Float", "width": 150, "precision": 2},
+            {"label": "Max Amount", "fieldname": "max_amt", "fieldtype": "Float", "width": 150, "precision": 2},
+            {"label": "Total Amount", "fieldname": "total_value", "fieldtype": "Float", "width": 120, "precision": 2},
             {"label": "Prize", "fieldname": "prizes", "fieldtype": "Data", "width": 140},
             {"label": "Gift", "fieldname": "gift", "fieldtype": "Data", "width": 140},
         ]
