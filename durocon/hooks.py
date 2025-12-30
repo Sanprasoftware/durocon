@@ -141,6 +141,9 @@ doc_events = {
     "Sales Invoice": {
         "on_submit": "durocon.public.py.sales_invoice.get_data"
     },
+	"Lead": {
+		"after_insert": "durocon.public.py.lead.create_address"
+	}
 	# "*": {
 	# 	"on_update": "method",
 	# 	"on_cancel": "method",
