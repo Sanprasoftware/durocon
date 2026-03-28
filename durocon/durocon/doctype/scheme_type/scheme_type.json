@@ -28,7 +28,7 @@
  "grid_page_length": 50,
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2025-05-19 19:42:39.458162",
+ "modified": "2026-02-26 19:17:50.055743",
  "modified_by": "Administrator",
  "module": "Durocon",
  "name": "Scheme Type",
@@ -48,6 +48,7 @@
    "write": 1
   }
  ],
+ "row_format": "Dynamic",
  "sort_field": "modified",
  "sort_order": "DESC",
  "states": []

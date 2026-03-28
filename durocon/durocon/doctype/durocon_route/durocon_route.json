@@ -1,29 +1,44 @@
 {
  "actions": [],
  "allow_rename": 1,
- "autoname": "field:plan_name",
- "creation": "2025-11-18 22:47:36.112536",
+ "autoname": "format:{route}",
+ "creation": "2026-01-05 16:23:41.811306",
  "doctype": "DocType",
  "engine": "InnoDB",
  "field_order": [
-  "plan_name"
+  "route",
+  "column_break_woyw",
+  "territory"
  ],
  "fields": [
   {
-   "fieldname": "plan_name",
+   "fieldname": "route",
    "fieldtype": "Data",
-   "label": "Plan Name",
-   "unique": 1
+   "in_list_view": 1,
+   "label": "Route",
+   "reqd": 1
+  },
+  {
+   "fieldname": "column_break_woyw",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "territory",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "Territory",
+   "options": "Territory",
+   "reqd": 1
   }
  ],
  "grid_page_length": 50,
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2026-02-26 19:17:47.941052",
+ "modified": "2026-02-26 19:17:47.823786",
  "modified_by": "Administrator",
  "module": "Durocon",
- "name": "Project Plan",
- "naming_rule": "By fieldname",
+ "name": "Durocon Route",
+ "naming_rule": "Expression",
  "owner": "Administrator",
  "permissions": [
   {

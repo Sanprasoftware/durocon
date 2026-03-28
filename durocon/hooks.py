@@ -43,7 +43,10 @@ app_license = "mit"
 # page_js = {"page" : "public/js/file.js"}
 
 # include js in doctype views
-# doctype_js = {"doctype" : "public/js/doctype.js"}
+doctype_js = {
+	"Sales Order" : "public/js/sales_order.js"
+}
+
 # doctype_list_js = {"doctype" : "public/js/doctype_list.js"}
 # doctype_tree_js = {"doctype" : "public/js/doctype_tree.js"}
 # doctype_calendar_js = {"doctype" : "public/js/doctype_calendar.js"}
@@ -129,6 +132,11 @@ app_license = "mit"
 # ---------------
 # Override standard doctype classes
 
+override_doctype_class = {
+	"Salary Slip": "durocon.durocon.overrides.salary_slip.CustomSalarySlip",
+}
+# durocon/overrides/salary_slip.py
+ 
 # override_doctype_class = {
 # 	"ToDo": "custom_app.overrides.CustomToDo"
 # }
@@ -141,9 +149,9 @@ doc_events = {
     "Sales Invoice": {
         "on_submit": "durocon.public.py.sales_invoice.get_data"
     },
-	"Lead": {
-		"after_insert": "durocon.public.py.lead.create_address"
-	}
+	# "Lead": {
+	# 	"after_insert": "durocon.public.py.lead.create_address"
+	# }
 	# "*": {
 	# 	"on_update": "method",
 	# 	"on_cancel": "method",

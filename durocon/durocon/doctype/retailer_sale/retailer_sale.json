@@ -1,0 +1,115 @@
+{
+ "actions": [],
+ "autoname": "series",
+ "creation": "2025-07-03 14:24:49.289254",
+ "doctype": "DocType",
+ "engine": "InnoDB",
+ "field_order": [
+  "section_break_ae1r",
+  "amended_from",
+  "naming_series",
+  "name1",
+  "column_break_tkjc",
+  "date",
+  "section_break_ezel",
+  "items",
+  "section_break_roak",
+  "qty_total",
+  "column_break_aztd",
+  "amount_total"
+ ],
+ "fields": [
+  {
+   "fieldname": "section_break_ae1r",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "amended_from",
+   "fieldtype": "Link",
+   "label": "Amended From",
+   "no_copy": 1,
+   "options": "Retailer Sale",
+   "print_hide": 1,
+   "read_only": 1,
+   "search_index": 1
+  },
+  {
+   "fieldname": "naming_series",
+   "fieldtype": "Select",
+   "label": "Series",
+   "options": "\nDURO-.YYYY.-\nDURO-DU-.YYYY.-\nDURO-ORD-RO-.YYYY.-"
+  },
+  {
+   "fieldname": "name1",
+   "fieldtype": "Link",
+   "label": "Name",
+   "options": "Retailer Master"
+  },
+  {
+   "fieldname": "column_break_tkjc",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "date",
+   "fieldtype": "Date",
+   "label": "Date"
+  },
+  {
+   "fieldname": "section_break_ezel",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "items",
+   "fieldtype": "Table",
+   "label": "items",
+   "options": "Retailer Item"
+  },
+  {
+   "fieldname": "section_break_roak",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "qty_total",
+   "fieldtype": "Int",
+   "label": "Qty Total"
+  },
+  {
+   "fieldname": "column_break_aztd",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "amount_total",
+   "fieldtype": "Float",
+   "label": "Amount Total"
+  }
+ ],
+ "grid_page_length": 50,
+ "index_web_pages_for_search": 1,
+ "is_submittable": 1,
+ "links": [],
+ "modified": "2026-02-26 19:17:48.648082",
+ "modified_by": "Administrator",
+ "module": "Durocon",
+ "name": "Retailer Sale",
+ "naming_rule": "By \"Naming Series\" field",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "submit": 1,
+   "write": 1
+  }
+ ],
+ "row_format": "Dynamic",
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": []
+}

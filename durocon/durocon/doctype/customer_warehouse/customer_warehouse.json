@@ -1,29 +1,41 @@
 {
  "actions": [],
  "allow_rename": 1,
- "autoname": "field:plan_name",
- "creation": "2025-11-18 22:47:36.112536",
+ "creation": "2026-03-08 09:33:36.603717",
  "doctype": "DocType",
  "engine": "InnoDB",
  "field_order": [
-  "plan_name"
+  "customer",
+  "warehouse",
+  "user"
  ],
  "fields": [
   {
-   "fieldname": "plan_name",
-   "fieldtype": "Data",
-   "label": "Plan Name",
-   "unique": 1
+   "fieldname": "customer",
+   "fieldtype": "Link",
+   "label": "Customer",
+   "options": "Customer"
+  },
+  {
+   "fieldname": "warehouse",
+   "fieldtype": "Link",
+   "label": "Warehouse",
+   "options": "Warehouse"
+  },
+  {
+   "fieldname": "user",
+   "fieldtype": "Link",
+   "label": "User",
+   "options": "User"
   }
  ],
  "grid_page_length": 50,
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2026-02-26 19:17:47.941052",
+ "modified": "2026-03-11 09:33:17.862104",
  "modified_by": "Administrator",
  "module": "Durocon",
- "name": "Project Plan",
- "naming_rule": "By fieldname",
+ "name": "Customer Warehouse",
  "owner": "Administrator",
  "permissions": [
   {

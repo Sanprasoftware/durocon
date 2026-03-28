@@ -18,15 +18,17 @@
    "options": "Territory"
   }
  ],
+ "grid_page_length": 50,
  "index_web_pages_for_search": 1,
  "istable": 1,
  "links": [],
- "modified": "2025-05-31 11:24:49.358785",
+ "modified": "2026-02-26 19:17:49.398729",
  "modified_by": "Administrator",
  "module": "Durocon",
  "name": "Territory Multiselect",
  "owner": "Administrator",
  "permissions": [],
+ "row_format": "Dynamic",
  "sort_field": "modified",
  "sort_order": "DESC",
  "states": []

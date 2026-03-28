@@ -15,7 +15,8 @@
   "items",
   "total_qty",
   "section_break_ixhs",
-  "remarks"
+  "remarks",
+  "amended_from"
  ],
  "fields": [
   {
@@ -78,12 +79,23 @@
    "fieldname": "total_qty",
    "fieldtype": "Float",
    "label": "Total Qty"
+  },
+  {
+   "fieldname": "amended_from",
+   "fieldtype": "Link",
+   "label": "Amended From",
+   "no_copy": 1,
+   "options": "Marketing Material Issue",
+   "print_hide": 1,
+   "read_only": 1,
+   "search_index": 1
   }
  ],
  "grid_page_length": 50,
  "index_web_pages_for_search": 1,
+ "is_submittable": 1,
  "links": [],
- "modified": "2025-12-23 17:20:07.348186",
+ "modified": "2026-02-26 19:17:47.546995",
  "modified_by": "Administrator",
  "module": "Durocon",
  "name": "Marketing Material Issue",
@@ -91,6 +103,8 @@
  "owner": "Administrator",
  "permissions": [
   {
+   "amend": 1,
+   "cancel": 1,
    "create": 1,
    "delete": 1,
    "email": 1,
@@ -99,7 +113,9 @@
    "read": 1,
    "report": 1,
    "role": "System Manager",
+   "select": 1,
    "share": 1,
+   "submit": 1,
    "write": 1
   },
   {

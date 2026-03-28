@@ -209,9 +209,10 @@
    "fieldtype": "Column Break"
   }
  ],
+ "grid_page_length": 50,
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2025-06-02 13:22:05.078106",
+ "modified": "2026-02-26 19:17:49.804298",
  "modified_by": "Administrator",
  "module": "Durocon",
  "name": "Scheme",
@@ -231,6 +232,7 @@
    "write": 1
   }
  ],
+ "row_format": "Dynamic",
  "sort_field": "modified",
  "sort_order": "DESC",
  "states": []

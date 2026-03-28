@@ -1,7 +1,7 @@
 import frappe
 
-def create_address(doc, method=None):
-    pass
+# def create_address(doc, method=None):
+#     pass
     # new_doc = frappe.new_doc("Address")
     # new_doc.address_title = doc.lead_name
     # new_doc.address_type = "Billing"
