@@ -123,6 +123,7 @@ doctype_js = {
 # permission_query_conditions = {
 # 	"Event": "frappe.desk.doctype.event.event.get_permission_query_conditions",
 # }
+
 #
 # has_permission = {
 # 	"Event": "frappe.desk.doctype.event.event.has_permission",
@@ -146,17 +147,28 @@ override_doctype_class = {
 # Hook on document methods and events
 
 doc_events = {
-    "Sales Invoice": {
-        "on_submit": "durocon.public.py.sales_invoice.get_data"
-    },
-	# "Lead": {
-	# 	"after_insert": "durocon.public.py.lead.create_address"
+	"Sales Invoice": {
+		"on_submit": [
+			"durocon.public.py.sales_invoice.get_data",
+			"durocon.public.py.sales_invoice.if_distributor_customer"
+		]
+		# "on_submit": "durocon.public.py.sales_invoice.get_data",
+		# "on_submit":"durocon.public.py.sales_invoice.if_distributor_customer"
+	},
+	# "Employee Checkin": {
+	# 	"before_save": "durocon.public.py.employee_checkin.delete_attatchment"
 	# }
+	"Lead": {
+		"before_save": "durocon.public.py.lead.delete_attachment"
+	},
 	# "*": {
 	# 	"on_update": "method",
 	# 	"on_cancel": "method",
 	# 	"on_trash": "method"
 	# }
+	"Employee Checkin": {
+        "before_save": "durocon.public.py.employee_checkin.delete_attachment"
+    }
 }
 
 # Scheduled Tasks

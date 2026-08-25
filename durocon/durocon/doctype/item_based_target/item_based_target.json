@@ -1,0 +1,173 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "creation": "2026-04-18 16:11:48.659835",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "item_code",
+  "column_break_tets",
+  "item_name",
+  "column_break_umsy",
+  "target_qty",
+  "incentive_rate",
+  "section_break_vnhj",
+  "jan",
+  "feb",
+  "mar",
+  "column_break_tfam",
+  "apr",
+  "may",
+  "jun",
+  "column_break_vesb",
+  "jul",
+  "aug",
+  "sep",
+  "column_break_hwic",
+  "oct",
+  "nov",
+  "dec"
+ ],
+ "fields": [
+  {
+   "fetch_from": "item_code.item_name",
+   "fieldname": "item_name",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Item Name"
+  },
+  {
+   "fieldname": "target_qty",
+   "fieldtype": "Float",
+   "in_list_view": 1,
+   "label": "Target Qty",
+   "precision": "2",
+   "reqd": 1
+  },
+  {
+   "fieldname": "item_code",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "Item Code",
+   "options": "Item"
+  },
+  {
+   "fieldname": "column_break_tets",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "column_break_umsy",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "incentive_rate",
+   "fieldtype": "Float",
+   "in_list_view": 1,
+   "label": "Incentive Rate",
+   "precision": "2"
+  },
+  {
+   "fieldname": "section_break_vnhj",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "jan",
+   "fieldtype": "Float",
+   "label": "Jan",
+   "precision": "2"
+  },
+  {
+   "fieldname": "feb",
+   "fieldtype": "Float",
+   "label": "Feb",
+   "precision": "2"
+  },
+  {
+   "fieldname": "mar",
+   "fieldtype": "Float",
+   "label": "Mar",
+   "precision": "2"
+  },
+  {
+   "fieldname": "column_break_tfam",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "apr",
+   "fieldtype": "Float",
+   "label": "APR",
+   "precision": "2"
+  },
+  {
+   "fieldname": "may",
+   "fieldtype": "Float",
+   "label": "May",
+   "precision": "2"
+  },
+  {
+   "fieldname": "jun",
+   "fieldtype": "Float",
+   "label": "Jun",
+   "precision": "2"
+  },
+  {
+   "fieldname": "column_break_vesb",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "jul",
+   "fieldtype": "Float",
+   "label": "Jul",
+   "precision": "2"
+  },
+  {
+   "fieldname": "aug",
+   "fieldtype": "Float",
+   "label": "Aug",
+   "precision": "2"
+  },
+  {
+   "fieldname": "sep",
+   "fieldtype": "Float",
+   "label": "Sep",
+   "precision": "2"
+  },
+  {
+   "fieldname": "column_break_hwic",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "oct",
+   "fieldtype": "Float",
+   "label": "Oct",
+   "precision": "2"
+  },
+  {
+   "fieldname": "nov",
+   "fieldtype": "Float",
+   "label": "Nov",
+   "precision": "2"
+  },
+  {
+   "fieldname": "dec",
+   "fieldtype": "Float",
+   "label": "Dec",
+   "precision": "2"
+  }
+ ],
+ "grid_page_length": 50,
+ "index_web_pages_for_search": 1,
+ "istable": 1,
+ "links": [],
+ "modified": "2026-04-27 11:17:40.040417",
+ "modified_by": "Administrator",
+ "module": "Durocon",
+ "name": "Item based target",
+ "owner": "Administrator",
+ "permissions": [],
+ "row_format": "Dynamic",
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": []
+}

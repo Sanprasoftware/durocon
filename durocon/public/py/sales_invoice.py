@@ -7,7 +7,7 @@ def get_data(doc, method):
     company_source_wh = frappe.get_value("Company",doc.company,"custom_source_warehouse")
 
     for cust in customers:
-        if doc.update_stock == 1:
+        if doc.update_stock == 1 and doc.is_return == 0:
             warehouses = frappe.get_all("Warehouse",filters={"name": cust.custom_warehouse},fields=["company"] )
             for wh in warehouses:
                 data = frappe.new_doc("Stock Entry")
@@ -57,3 +57,12 @@ def get_data(doc, method):
     #     })
     # data.save()
     # data.submit()
+#**************************************************************************************************
+@frappe.whitelist()
+def if_distributor_customer(doc, method=None):
+    # frappe.throw("hiii")
+    if doc.update_stock == 1 and doc.is_return == 0:
+        custom_warehouse = frappe.get_value("Customer", doc.customer, "custom_warehouse")
+
+        if custom_warehouse:
+            frappe.throw("You cannot update stock for Distributor.")

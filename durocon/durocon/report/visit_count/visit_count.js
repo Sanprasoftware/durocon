@@ -6,7 +6,7 @@ frappe.query_reports["Visit Count"] = {
 		{
 			"fieldname": "from_date",
 			"label": "From Date",
-			"fieldtype": "Date",
+			"fieldtype": "Date", 
 			"reqd": 1
 		},
 		{
